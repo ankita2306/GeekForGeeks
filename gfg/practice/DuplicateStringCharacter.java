@@ -8,7 +8,7 @@ import java.util.Map;
 public class DuplicateStringCharacter
 {
     public static void main(String[] args) {
-        String n="ankita";
+        String n="geeksforgeeks";
         printDuplicates(n);
     }
 
@@ -25,9 +25,10 @@ public class DuplicateStringCharacter
                 d.put(x,1);
         }
 
-
-
+        for (Map.Entry<Character,Integer> mapElement:d.entrySet())
+        {
+            if(mapElement.getValue()>1)
+                System.out.println(mapElement.getKey() + ", count = " + mapElement.getValue());
+        }
     }
-
-
 }
